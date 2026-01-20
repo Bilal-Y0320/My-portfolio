@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,70 +8,203 @@
     font-family: "Poppins", sans-serif;
     font-size: 1.1rem;
     text-decoration: none;
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px;
 }
 
-body{
+body {
     width: 100%;
     height: 100vh;
     background: linear-gradient(to top, #7a14ff9f, #000);
 }
 
-header{
+header {
     width: 100%;
-    height: 8vh;
+    height: auto;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    background:linear-gradient(to top #000);
+    background: linear-gradient(to top #000);
     position: fixed;
     top: 0;
+    backdrop-filter: blur(5px);
 }
 
-header h2{
+header h2 {
     font-size: 1.7rem;
     font-weight: 500;
     margin-left: 2rem;
     transition: 0.4s ease-in;
 }
 
-header h2:hover{
+header h2:hover {
     transform: scale(1.05);
     color: #b887f8a9;
+    text-shadow: 4px 4px 10px #b887f8a9;
 }
 
-nav{
+nav {
     display: flex;
     gap: 35px;
     margin-right: 2rem;
 }
 
-nav a{
+nav a {
+    text-shadow: 2px 2px 5px #fff;
     transition: 0.3s ease-in-out;
 }
 
-nav a:hover{
+nav a:hover {
     transform: translateY(1px);
     color: #b887f8a9;
+    text-shadow: 4px 4px 10px #b887f8a9;
 }
 
-#About{
+#About {
     width: 100%;
-    height: 90vh;
-    margin-top: 10rem;
+    height: auto;
+    margin-top: 15rem;
 }
 
-#about-cont{
+#about-cont {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10rem;
 }
 
-#about-cont img{
+#about-cont img {
     width: 20rem;
     border-radius: 50%;
+    box-shadow: 4px 4px 15px #fff;
 }
 
-#about-cont #about-text p{
-    width: 600px;
+#about-cont #about-text {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#about-cont #about-text h1 {
+    text-shadow: 2px 2px 5px #fff;
+    font-size: 2.2rem;
+}
+
+#about-cont #about-text h1 span {
+    font-size: 2.5rem;
+    border-left: 4px solid #b887f8a9;
+    padding-left: 10px;
+    color: #b887f8a9;
+    text-shadow: 4px 4px 10px #b887f8a9;
+}
+
+#about-cont #about-text h3 {
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 5px #fff;
+}
+
+#about-cont #about-text h3 span {
+    font-size: 1.8rem;
+    color: #b887f8a9;
+    text-shadow: 4px 4px 10px #b887f8a9;
+    border-left: 3px solid #b887f8a9;
+    padding-left: 10px;
+    position: relative;
+}
+
+#about-cont #about-text h3 span::after {
+    content: "";
+    display: inline-block;
+    height: 3rem;
+    animation: bordar 0.3s infinite;
+    position: absolute;
+    align-self: center;
+}
+
+@keyframes bordar {
+
+    0%,
+    100% {
+        border-right: 2px solid #b887f8a9;
+    }
+
+    50% {
+        border-right: 2px solid transparent;
+    }
+}
+
+#about-cont #about-text h3 span::before {
+    content: "";
+    animation: profession 10s infinite;
+}
+
+@keyframes profession {
+    0% {
+        content: "Front-end Developer";
+    }
+
+    10% {
+        content: "Front-end Developer";
+    }
+
+    20% {
+        content: "HTML & CSS Expert";
+    }
+
+    30% {
+        content: "HTML & CSS Expert";
+    }
+
+    40% {
+        content: "UI-focused Developer";
+    }
+
+    50% {
+        content: "UI-focused Developer";
+    }
+
+    60% {
+        content: "Creative Programmer";
+    }
+
+    70% {
+        content: "Creative Programmer";
+    }
+
+    80% {
+        content: "Responsive Web Builder";
+    }
+
+    90% {
+        content: "Responsive Web Builder";
+    }
+
+    100% {
+        content: "Front-end Developer";
+    }
+}
+
+#about-cont #about-text p {
+    text-shadow: 2px 2px 5px #fff;
+    width: 800px;
+}
+
+#about-cont #btns {
+    margin-top: 20px;
+    display: flex;
+    gap: 30px;
+}
+
+#about-cont #btns a {
+    border: 2px solid #000;
+    padding: 10px 25px;
+    border-radius: 20px;
+    text-shadow: 2px 2px 5px #fff;
+    background: linear-gradient(to top, #7a14ff9f, #000);
+    transition: 0.3s ease-in-out;
+}
+
+#about-cont #btns a:hover {
+    box-shadow: 5px 5px 15px #000;
+    transform: translateY(5px);
 }
