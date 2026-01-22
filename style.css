@@ -13,7 +13,7 @@
 
 body {
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background: linear-gradient(to top, #7a14ff9f, #000);
 }
 
@@ -21,7 +21,7 @@ header {
     width: 100%;
     height: auto;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     background: linear-gradient(to top #000);
     position: fixed;
@@ -214,12 +214,26 @@ nav a:hover {
 }
 
 @media (max-width: 1000px){
+
+    header h2{
+        margin-left: 1rem;
+        font-size: 1.5rem;
+    }
+
+    nav a{
+        font-size: 0.7rem;
+    }
+
+    nav{
+        gap: 10px;
+    }
     
 #about-cont{
     flex-direction: column;
+    padding-inline: 10px;
 }
 
 #about-cont #about-text p {
-    width: 400px;
+    width: 350px;
 }
 }
